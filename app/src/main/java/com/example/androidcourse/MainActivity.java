@@ -22,6 +22,18 @@ public class MainActivity extends AppCompatActivity {
                 openCalc();
             }
         });
+
+        Button XMLView = (Button) findViewById(R.id.buttonToXML);
+        XMLView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openXMLV();
+            }
+        });
+    }
+    public void openXMLV() {
+        Intent intent = new Intent(this, XMLView.class);
+        startActivity(intent);
     }
 
     public void openCalc() {
