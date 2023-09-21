@@ -30,9 +30,23 @@ public class MainActivity extends AppCompatActivity {
                 openXMLV();
             }
         });
+
+        Button settings = (Button) findViewById(R.id.SettingButton);
+        settings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openSettings();
+            }
+        });
     }
+
+
     public void openXMLV() {
         Intent intent = new Intent(this, XMLView.class);
+        startActivity(intent);
+    }
+    public void openSettings() {
+        Intent intent = new Intent(this, Settings.class);
         startActivity(intent);
     }
 
